@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ======================================
+       PAGE SETTINGS
+       ====================================== -->
+  <meta charset="UTF-8">
+  <title>Home Health Care Referral Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ======================================
+         PAGE TITLE
+         ====================================== -->
+    <h1>Home Health Care Referral Services</h1>
+
+    <!-- ======================================
+         SERVICE DESCRIPTION
+         ====================================== -->
+    <p>
+      This service facilitates private referrals between individuals
+      seeking home health care and independent service providers.
+      No medical services are provided.
+    </p>
+
+    <!-- ======================================
+         REFERRAL INTAKE FORM
+         ====================================== -->
+    <h2>Referral Intake Form</h2>
+
+    <form id="referralForm">
+
+      <!-- FULL NAME -->
+      <label>
+        Full Name
+        <input type="text" id="name" required>
+      </label>
+
+      <!-- PHONE -->
+      <label>
+        Phone Number
+        <input type="tel" id="phone" required>
+      </label>
+
+      <!-- EMAIL -->
+      <label>
+        Email Address
+        <input type="email" id="email">
+      </label>
+
+      <!-- LOCATION -->
+      <label>
+        City / State
+        <input type="text" id="location">
+      </label>
+
+      <!-- CARE TYPE -->
+      <label>
+        Type of Care Needed
+        <select id="care">
+          <option>Companion Care</option>
+          <option>Personal Care</option>
+          <option>Skilled Nursing</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <!-- DESCRIPTION -->
+      <label>
+        Brief Description of Needs
+        <textarea id="description"></textarea>
+      </label>
+
+      <!-- AGREEMENT -->
+      <label>
+        <input type="checkbox" required>
+        I understand this submission is for referral facilitation only.
+      </label>
+
+      <!-- SUBMIT BUTTON -->
+      <button type="submit">Submit Referral</button>
+
+    </form>
+
+    <!-- ======================================
+         BACK LINK
+         ====================================== -->
+    <footer>
+      <a href="index.html">← Back to Headquarters</a>
+    </footer>
+
+  </div>
+
+  <!-- ======================================
+       FORM SUBMISSION SCRIPT
+       Sends data to backend
+       ====================================== -->
+  <script>
+    document.getElementById("referralForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // stops page refresh
+
+      fetch("PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE", {
+        method: "POST",
+        body: JSON.stringify({
+          formType: "referral",
+          full_name: document.getElementById("name").value,
+          phone: document.getElementById("phone").value,
+          email: document.getElementById("email").value,
+          location: document.getElementById("location").value,
+          care_type: document.getElementById("care").value,
+          description: document.getElementById("description").value
+        })
+      })
+      .then(() => alert("Referral submitted successfully."));
+    });
+  </script>
+
+</body>
+</html>
