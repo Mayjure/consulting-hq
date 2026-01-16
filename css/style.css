@@ -1,0 +1,87 @@
+body {
+    background-color: red !important;
+}
+
+
+
+/* =========================================
+   GLOBAL PAGE SETTINGS
+   This controls the entire website look
+   ========================================= */
+
+body {
+  margin: 0; /* removes default browser spacing */
+  font-family: Georgia, serif; /* professional font */
+  background-color: #1b1b1b; /* dark cigar-lounge background */
+  color: #f5f0e6; /* soft readable text */
+}
+
+/* =========================================
+   MAIN CONTENT CONTAINER
+   Keeps content centered and readable
+   ========================================= */
+
+.container {
+  max-width: 900px; /* limits width */
+  margin: auto; /* centers the content */
+  padding: 40px 20px; /* space inside */
+}
+
+/* =========================================
+   HEADINGS
+   Used for titles
+   ========================================= */
+
+h1, h2 {
+  color: #d6b36a; /* gold tone */
+  font-weight: normal;
+}
+
+/* =========================================
+   LINKS & BUTTONS
+   ========================================= */
+
+a, button {
+  background-color: #3b2f2f; /* dark brown */
+  color: #f5f0e6;
+  padding: 12px 20px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+a:hover, button:hover {
+  background-color: #5a4636;
+}
+
+/* =========================================
+   FORMS
+   ========================================= */
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #2a2a2a;
+  color: #f5f0e6;
+  border: 1px solid #5a4636;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #b3a58c;
+  text-align: center;
+}
+
