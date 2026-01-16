@@ -6,6 +6,7 @@
 <!-- DOCUMENT METADATA -->
 <!-- PAGE SETTINGS -->
 <!-- =============================== -->
+
 <meta charset="UTF-8">
 <title>Home Health Referral Program</title>
 
@@ -13,6 +14,7 @@
 <!-- STYLESHEET CONNECTION -->
 <!-- GLOBAL SITE STYLES -->
 <!-- =============================== -->
+
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -22,6 +24,7 @@
 <!-- SITE HEADER -->
 <!-- PAGE TITLE -->
 <!-- =============================== -->
+
 <header>
     <h1>Home Health Referral Program</h1>
     <p class="tagline">Professional Client Referrals</p>
@@ -37,6 +40,7 @@
     <!-- PROGRAM OVERVIEW -->
     <!-- HOW THE REFERRAL SYSTEM WORKS -->
     <!-- =============================== -->
+
     <section class="card">
         <h2>How It Works</h2>
         <p>
@@ -45,15 +49,28 @@
         </p>
     </section>
 
+
     <!-- =============================== -->
     <!-- REFERRAL SUBMISSION FORM -->
     <!-- CLIENT INTAKE -->
     <!-- =============================== -->
+
     <section class="card">
 
         <h2>Submit a Referral</h2>
 
-        <form action="#" method="post">
+  <!-- ===================================== -->
+  <!-- FORMSPREE FORM (TEMPORARILY DISABLED) -->
+  <!-- ===================================== -->
+
+    <!-- <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> -->
+
+<!-- ===================================== -->
+    <!-- TEMPORARY THANK YOU FORM -->
+<!-- ===================================== -->
+
+    <form action="thankyou.html" method="GET">
+
 
             <!-- CLIENT NAME -->
             <label>Client Full Name</label>
@@ -65,11 +82,11 @@
 
             <!-- CLIENT EMAIL -->
             <label>Email Address</label>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
 
             <!-- CARE DESCRIPTION -->
             <label>Care Needed</label>
-            <textarea name="care_needs"></textarea>
+            <textarea name="care_needs" required></textarea>
 
             <!-- FORM SUBMISSION -->
             <button type="submit">Submit Referral</button>
@@ -84,6 +101,7 @@
 <!-- FOOTER -->
 <!-- NAVIGATION -->
 <!-- =============================== -->
+
 <footer>
     <a href="index.html">← Back to Headquarters</a>
 </footer>
