@@ -57,6 +57,27 @@ a:hover, button:hover {
 }
 
 /* =============================== */
+/* DONATION SECTION */
+/* =============================== */
+.donation-box {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #2b1b10;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.donation-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 25px;
+  background-color: #d6b36a;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* =============================== */
 /* DONATION BUTTON */
 /* =============================== */
 .donation-button {
