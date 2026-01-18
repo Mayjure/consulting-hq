@@ -122,3 +122,17 @@ footer {
     text-align: center;
 }
 
+/* =============================== */
+/* MAIN NAVIGATION */
+/* =============================== */
+
+.main-nav {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main-nav a {
+  margin: 0 10px;
+}
+
+
