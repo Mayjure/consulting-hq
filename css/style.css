@@ -135,4 +135,11 @@ footer {
   margin: 0 10px;
 }
 
+/* =============================== */
+/* CENTER PAGE TITLES */
+/* =============================== */
+
+header, h1 {
+  text-align: center;
+}
 
