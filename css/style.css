@@ -207,3 +207,12 @@ form button {
   text-align: center;
   margin-top: 40px;
 }
+
+/* =============================== */
+/* BOTTOM NAVIGATION */
+/* =============================== */
+
+.bottom-nav a {
+  font-size: 0.9em;
+  padding: 8px 14px;
+}
