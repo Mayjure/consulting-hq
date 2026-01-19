@@ -261,3 +261,11 @@ form button {
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+
+/* =============================== */
+/* TEXT ALIGNMENT HELPERS */
+/* =============================== */
+
+.center-text {
+  text-align: center;
+}
