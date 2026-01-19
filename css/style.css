@@ -309,10 +309,16 @@ form button {
 
 /* =============================== */
 /* BROWN FOUNDATION CARD */
+/* PRIMARY CONTENT CONTAINER */
 /* =============================== */
 
 .card-brown {
-  background: linear-gradient(180deg, #3b2f2f, #241a1a);
+    background: linear-gradient(180deg, #3b2f2f, #241a1a);
+    padding: 40px;
+    border-radius: 14px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
 }
 
 /* =============================== */
