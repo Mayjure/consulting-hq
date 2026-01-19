@@ -301,3 +301,13 @@ form button {
 .card-brown {
   background: linear-gradient(180deg, #3b2f2f, #241a1a);
 }
+
+/* =============================== */
+/* PAGE BANNER */
+/* FORCE FULL WIDTH */
+/* =============================== */
+
+.page-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
