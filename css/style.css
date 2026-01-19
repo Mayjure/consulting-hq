@@ -242,3 +242,13 @@ form button {
   padding: 8px 14px;
   font-size: 0.9em;
 }
+
+/* =============================== */
+/* PAGE BANNER */
+/* =============================== */
+
+.page-banner {
+  height: 220px;
+  background-color: #2a2a2a;
+  margin-bottom: 30px;
+}
