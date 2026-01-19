@@ -273,6 +273,17 @@ form button {
 }
 
 /* =============================== */
+/* GLOBAL CARD ALIGNMENT FIX */
+/* =============================== */
+
+.card,
+.card-brown,
+.card-grey {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =============================== */
 /* TEXT ALIGNMENT HELPERS */
 /* =============================== */
 
