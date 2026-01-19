@@ -198,3 +198,12 @@ form button {
 .home-actions a {
   margin: 15px;
 }
+
+/* =============================== */
+/* HOMEPAGE ACTION AREA */
+/* =============================== */
+
+.home-actions {
+  text-align: center;
+  margin-top: 40px;
+}
