@@ -254,6 +254,16 @@ form button {
 }
 
 /* =============================== */
+/* PAGE BANNER */
+/* =============================== */
+
+.page-banner {
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(135deg, #3b2f2f, #1b1b1b);
+}
+
+/* =============================== */
 /* MODERN CARD EFFECT */
 /* =============================== */
 
