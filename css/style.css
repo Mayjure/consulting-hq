@@ -186,3 +186,15 @@ form button {
   display: block;
   margin: 30px auto 0 auto;
 }
+
+/* =============================== */
+/* HOMEPAGE ACTION BUTTONS */
+/* =============================== */
+
+.home-actions {
+  text-align: center;
+}
+
+.home-actions a {
+  margin: 15px;
+}
