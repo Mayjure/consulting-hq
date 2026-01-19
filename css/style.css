@@ -301,7 +301,7 @@ form button {
 .section-wrap {
     display: flex;
     justify-content: center;
-    padding: 80px 20px;
+    width: 100%;
 }
 
 /* =============================== */
@@ -354,4 +354,19 @@ form button {
 .page-banner {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+}
+
+/* =============================== */
+/* TRUE CENTER TEXT UTILITY */
+/* =============================== */
+
+.center-text {
+    text-align: center;
+}
+
+.center-text p,
+.center-text a,
+.center-text form {
+    margin-left: auto;
+    margin-right: auto;
 }
