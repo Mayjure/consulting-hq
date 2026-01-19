@@ -293,3 +293,11 @@ form button {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.6);
 }
+
+/* =============================== */
+/* BROWN FOUNDATION CARD */
+/* =============================== */
+
+.card-brown {
+  background: linear-gradient(180deg, #3b2f2f, #241a1a);
+}
