@@ -103,9 +103,17 @@
             <label>Email Address</label>
             <input type="email" name="email" required>
 
-            <!-- CARE DESCRIPTION -->
-            <label>Care Needed</label>
-            <textarea name="care_needs" required></textarea>
+            <!-- =============================== -->
+            <!-- SERVICE TYPE REQUEST -->
+            <!-- =============================== -->
+            <label>Type of Care Requested</label>
+            <select name="care_type" required>
+            <option value="">Select One</option>
+            <option>24-Hour Care (Skilled) LPN, RN, Physical Therapist</option>
+            <option>24-Hour Care (Non-Skilled)</option>
+            <option>Less Than 24 Hours (Skilled) LPN, RN, Physical Therapist</option>
+            <option>Less Than 24 Hours (Non-Skilled)</option>
+            </select>
 
             <!-- MEDICAID QUALIFICATION -->
             <label>Does the client have active Medicaid?</label>
@@ -114,7 +122,16 @@
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
-        
+
+            <!-- =============================== -->
+            <!-- VERIFICATION DOCUMENTS -->
+            <!-- =============================== -->
+            <label>Upload State ID</label>
+            <input type="file" required>
+
+            <label>Upload Medicaid ID</label>
+            <input type="file" required>
+
             <!-- FORM SUBMISSION -->
             <button type="submit">Submit Referral</button>
 
@@ -161,6 +178,7 @@
 
 </body>
 </html>
+
 
 
 
