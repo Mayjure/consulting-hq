@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,9 +55,38 @@
     <h2>Home Health Referral Leads</h2>
     <p>Incoming Medicaid-qualified client submissions.</p>
 
-    <!-- Placeholder table -->
-    <p><em>Leads will appear here.</em></p>
+   <!-- =============================== -->
+<!-- BATCH LEAD DISTRIBUTION -->
+<!-- HQ SELECTION PANEL -->
+<!-- =============================== -->
+<section class="card">
+    <h2>Batch Lead Distribution</h2>
+    <p>Select the leads you want to send in a single batch to the Home Health Company.</p>
+
+    <form id="batchForm">
+        <!-- Table of leads -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Client Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Medicaid</th>
+                    <th>Care Type</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JS will dynamically populate rows from HH_Leads.ods -->
+            </tbody>
+        </table>
+
+        <!-- Batch send button -->
+        <button type="submit" class="button">Send Selected Leads</button>
+    </form>
 </section>
+
 
 <!-- =============================== -->
 <!-- CONSULTING LEADS SECTION -->
