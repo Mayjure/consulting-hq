@@ -85,3 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/* =============================== */
+/* BATCH LEAD SELECTION LOGIC */
+/* =============================== */
+
+document.getElementById('batchForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent page refresh
+
+    // Collect checked leads
+    const selectedLeads = [];
+    document.querySelectorAll('input[name="leadSelect"]:checked').forEach(cb => {
+        selectedLeads.push(cb.value); // value = client row ID or email
+    });
+
+    if(selectedLeads.length === 0) {
+        alert("Please select at least one lead to send.");
+        return;
+    }
+
+    // Step 1: Generate batch email content (placeholder)
+    const batchContent = selectedLeads.join('\n');
+
+    // Step 2: Log batch action (update HH_Leads.ods Status column to "Sent")
+    // (Manual update for now, automation later)
+
+    // Step 3: Show confirmation
+    alert(`Batch of ${selectedLeads.length} leads prepared for sending.`);
+});
