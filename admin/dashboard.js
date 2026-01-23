@@ -1,4 +1,76 @@
 /* =============================== */
+/* SAMPLE REFERRAL LEADS (TEMP DATA) */
+/* =============================== */
+
+const referralLeads = [
+    {
+        id: 1,
+        name: "Test Client One",
+        email: "client1@example.com",
+        phone: "555-1111",
+        medicaid: "Yes",
+        care: "24hr Care with Skilled Nurse",
+        status: "Pending"
+    },
+    {
+        id: 2,
+        name: "Test Client Two",
+        email: "client2@example.com",
+        phone: "555-2222",
+        medicaid: "Yes",
+        care: "24hr Care without Skilled Nurse",
+        status: "Pending"
+    }
+];
+
+/* =============================== */
+/* POPULATE BATCH LEAD TABLE */
+/* =============================== */
+
+const batchTableBody = document.querySelector("#batchForm tbody");
+
+referralLeads.forEach(lead => {
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>
+            <input type="checkbox" name="leadSelect" value="${lead.id}">
+        </td>
+        <td>${lead.name}</td>
+        <td>${lead.email}</td>
+        <td>${lead.phone}</td>
+        <td>${lead.medicaid}</td>
+        <td>${lead.care}</td>
+        <td>${lead.status}</td>
+    `;
+
+    batchTableBody.appendChild(row);
+});
+
+/* =============================== */
+/* HANDLE BATCH SEND BUTTON */
+/* =============================== */
+
+document.getElementById("batchForm").addEventListener("submit", function(event) {
+
+    event.preventDefault(); // Stops page reload
+
+    const selectedLeads = [];
+
+    document.querySelectorAll('input[name="leadSelect"]:checked')
+        .forEach(box => selectedLeads.push(box.value));
+
+    if (selectedLeads.length === 0) {
+        alert("No leads selected.");
+        return;
+    }
+
+    alert("Batch prepared with Lead IDs: " + selectedLeads.join(", "));
+});
+
+
+/* =============================== */
 /* ADMIN LOGIN SCRIPT */
 /* ACCESS CONTROL LOGIC */
 /* =============================== */
