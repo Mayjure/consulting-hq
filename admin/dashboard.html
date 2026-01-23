@@ -55,7 +55,27 @@
     <h2>Home Health Referral Leads</h2>
     <p>Incoming Medicaid-qualified client submissions.</p>
 
-   <!-- =============================== -->
+    <!-- =============================== -->
+    <!-- REFERRAL LEADS TABLE -->
+    <!-- =============================== -->
+    <table>
+        <thead>
+            <tr>
+                <th>Client Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Medicaid</th>
+                <th>Care Type</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JS dynamically populates referral leads here -->
+        </tbody>
+    </table>
+</section>
+
+<!-- =============================== -->
 <!-- BATCH LEAD DISTRIBUTION -->
 <!-- HQ SELECTION PANEL -->
 <!-- =============================== -->
@@ -64,7 +84,7 @@
     <p>Select the leads you want to send in a single batch to the Home Health Company.</p>
 
     <form id="batchForm">
-        <!-- Table of leads -->
+        <!-- Table of leads for selection -->
         <table>
             <thead>
                 <tr>
@@ -78,7 +98,7 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- JS will dynamically populate rows from HH_Leads.ods -->
+                <!-- JS dynamically populates selectable rows here -->
             </tbody>
         </table>
 
@@ -87,14 +107,12 @@
     </form>
 </section>
 
-
 <!-- =============================== -->
 <!-- CONSULTING LEADS SECTION -->
 <!-- =============================== -->
 <section id="consults" class="card">
     <h2>Private Consulting Leads</h2>
     <p>High-net-worth consultation requests.</p>
-
     <p><em>Consult leads will appear here.</em></p>
 </section>
 
@@ -104,7 +122,6 @@
 <section id="donations" class="card">
     <h2>Donation Tracking</h2>
     <p>All referral and consulting donations.</p>
-
     <p><em>Donation records will appear here.</em></p>
 </section>
 
@@ -114,16 +131,14 @@
 <section id="agreements" class="card">
     <h2>Signed Agreements</h2>
     <p>Referral and consulting agreements.</p>
-
     <p><em>Agreements will be listed here.</em></p>
 </section>
 
-</div>
-
 <!-- =============================== -->
-<!-- DASHBOARD SCRIPT -->
+<!-- DASHBOARD JS -->
 <!-- =============================== -->
 <script src="dashboard.js"></script>
+
 
 </body>
 </html>
