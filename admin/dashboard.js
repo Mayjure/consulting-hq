@@ -10,7 +10,8 @@ const referralLeads = [
         phone: "555-1111",
         medicaid: "Yes",
         care: "24hr Care with Skilled Nurse",
-        status: "Pending"
+        status: "Pending",
+        agreement: "Not Signed"
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ const referralLeads = [
         phone: "555-2222",
         medicaid: "Yes",
         care: "24hr Care without Skilled Nurse",
-        status: "Pending"
+        status: "Pending",
+        agreement: "Not Signed"
     }
 ];
 
