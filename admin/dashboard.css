@@ -1,0 +1,16 @@
+/* =============================== */
+/* DASHBOARD STYLES */
+/* ADMIN ONLY */
+/* =============================== */
+
+header {
+    margin-top: 30px;
+}
+
+section.card {
+    margin-bottom: 30px;
+}
+
+#referrals, #consults, #donations, #agreements {
+    border-left: 4px solid #d6b36a;
+}
