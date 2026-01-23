@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- =============================== -->
+<!-- ADMIN LOGIN PAGE -->
+<!-- PRIVATE ACCESS GATE -->
+<!-- =============================== -->
+
+<head>
+
+    <!-- =============================== -->
+    <!-- PAGE META SETTINGS -->
+    <!-- =============================== -->
+    <meta charset="UTF-8">
+    <title>Admin Login | Consulting HQ</title>
+
+    <!-- =============================== -->
+    <!-- SHARED SITE STYLES -->
+    <!-- Uses main website styling -->
+    <!-- =============================== -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- =============================== -->
+    <!-- ADMIN-SPECIFIC STYLES -->
+    <!-- Dashboard-only visuals -->
+    <!-- =============================== -->
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<!-- =============================== -->
+<!-- LOGIN CONTAINER -->
+<!-- CENTERS CONTENT ON PAGE -->
+<!-- =============================== -->
+<div class="container center-text">
+
+    <!-- =============================== -->
+    <!-- LOGIN CARD -->
+    <!-- =============================== -->
+    <section class="card card-brown">
+
+        <!-- =============================== -->
+        <!-- LOGIN HEADER -->
+        <!-- =============================== -->
+        <h1>Administrator Access</h1>
+
+        <p>
+            Authorized access only.<br>
+            This area is restricted to Consulting HQ administration.
+        </p>
+
+        <!-- =============================== -->
+        <!-- LOGIN FORM -->
+        <!-- =============================== -->
+        <form id="adminLoginForm">
+
+            <!-- =============================== -->
+            <!-- USERNAME FIELD -->
+            <!-- =============================== -->
+            <label for="username">Username</label>
+            <input type="text" id="username" required>
+
+            <!-- =============================== -->
+            <!-- PASSWORD FIELD -->
+            <!-- =============================== -->
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+
+            <!-- =============================== -->
+            <!-- SUBMIT BUTTON -->
+            <!-- =============================== -->
+            <button type="submit" class="button">
+                Enter Dashboard
+            </button>
+
+        </form>
+
+        <!-- =============================== -->
+        <!-- LOGIN ERROR MESSAGE -->
+        <!-- HIDDEN UNTIL NEEDED -->
+        <!-- =============================== -->
+        <p id="loginError" style="display:none; color:#ffb3b3;">
+            Invalid credentials. Access denied.
+        </p>
+
+    </section>
+
+</div>
+
+<!-- =============================== -->
+<!-- LOGIN SCRIPT -->
+<!-- HANDLES ACCESS CHECK -->
+<!-- =============================== -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>
 
