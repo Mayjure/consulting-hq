@@ -69,8 +69,27 @@ document.getElementById("batchForm").addEventListener("submit", function(event) 
         return;
     }
 
-    alert("Batch prepared with Lead IDs: " + selectedLeads.join(", "));
+/* =============================== */
+/* AGREEMENT VERIFICATION */
+/* =============================== */
+
+let unsignedFound = false;
+
+selectedLeads.forEach(id => {
+    const lead = referralLeads.find(l => l.id == id);
+
+    if (lead && lead.agreement !== "Signed") {
+        unsignedFound = true;
+    }
 });
+
+if (unsignedFound) {
+    alert("Batch blocked: One or more selected leads do not have a signed agreement.");
+    return;
+}
+
+alert("Batch approved. All selected leads have signed agreements.");
+
 
 
 /* =============================== */
