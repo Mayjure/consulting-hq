@@ -45,6 +45,7 @@ referralLeads.forEach(lead => {
         <td>${lead.medicaid}</td>
         <td>${lead.care}</td>
         <td>${lead.status}</td>
+        <td>${lead.agreement}</td>
     `;
 
     batchTableBody.appendChild(row);
