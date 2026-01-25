@@ -1,4 +1,12 @@
 /* =============================== */
+/* DEBUG TEST */
+/* CONFIRM JS IS LOADING */
+/* =============================== */
+
+alert("dashboard.js is loaded and running");
+
+
+/* =============================== */
 /* DASHBOARD INITIALIZATION */
 /* WAIT FOR PAGE TO LOAD */
 /* =============================== */
