@@ -1,4 +1,12 @@
 /* =============================== */
+/* DASHBOARD INITIALIZATION */
+/* WAIT FOR PAGE TO LOAD */
+/* =============================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+/* =============================== */
 /* TEMPORARY REFERRAL LEAD DATA */
 /* DEVELOPMENT / TEST MODE */
 /* =============================== */
