@@ -1,5 +1,6 @@
 /* =============================== */
-/* SAMPLE REFERRAL LEADS (TEMP DATA) */
+/* TEMPORARY REFERRAL LEAD DATA */
+/* DEVELOPMENT / TEST MODE */
 /* =============================== */
 
 const referralLeads = [
@@ -7,7 +8,7 @@ const referralLeads = [
         id: 1,
         name: "Test Client One",
         email: "client1@example.com",
-        phone: "555-1111",
+        phone: "215-555-1111",
         medicaid: "Yes",
         care: "24hr Care with Skilled Nurse",
         status: "Pending",
@@ -17,13 +18,81 @@ const referralLeads = [
         id: 2,
         name: "Test Client Two",
         email: "client2@example.com",
-        phone: "555-2222",
+        phone: "215-555-2222",
         medicaid: "Yes",
         care: "24hr Care without Skilled Nurse",
         status: "Pending",
         agreement: "Not Signed"
     }
 ];
+
+/* =============================== */
+/* RENDER REFERRAL LEADS TO TABLE */
+/* =============================== */
+
+const referralTableBody = document.querySelector(
+    "#referrals table tbody"
+);
+
+referralLeads.forEach(lead => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td><input type="checkbox" value="${lead.id}"></td>
+        <td>${lead.name}</td>
+        <td>${lead.email}</td>
+        <td>${lead.phone}</td>
+        <td>${lead.medicaid}</td>
+        <td>${lead.care}</td>
+        <td>${lead.agreement}</td>
+    `;
+
+    referralTableBody.appendChild(row);
+});
+
+/* =============================== */
+/* BATCH PREPARATION BUTTON */
+/* AGREEMENT VERIFICATION */
+/* =============================== */
+
+document.getElementById("prepareBatchBtn").addEventListener("click", () => {
+
+    const selectedCheckboxes = document.querySelectorAll(
+        "#referrals table tbody input[type='checkbox']:checked"
+    );
+
+    let selectedLeads = [];
+    let unsignedFound = false;
+
+    selectedCheckboxes.forEach(box => {
+        const lead = referralLeads.find(l => l.id == box.value);
+
+        if (lead) {
+            selectedLeads.push(lead.id);
+
+            if (lead.agreement !== "Signed") {
+                unsignedFound = true;
+            }
+        }
+    });
+
+    if (selectedLeads.length === 0) {
+        alert("No leads selected.");
+        return;
+    }
+
+    if (unsignedFound) {
+        alert(
+            "Batch blocked: One or more selected leads do not have a signed agreement."
+        );
+        return;
+    }
+
+    alert(
+        "Batch approved. Lead IDs: " + selectedLeads.join(", ")
+    );
+});
+
 
 /* =============================== */
 /* POPULATE BATCH LEAD TABLE */
