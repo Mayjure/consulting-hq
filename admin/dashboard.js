@@ -1,17 +1,11 @@
-/* =============================== */
-/* DEBUG TEST */
-/* CONFIRM JS IS LOADING */
-/* =============================== */
-
-alert("dashboard.js is loaded and running");
-
+alert("Dashboard JS loaded AFTER DOM");
 
 /* =============================== */
 /* DASHBOARD INITIALIZATION */
 /* WAIT FOR PAGE TO LOAD */
 /* =============================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () => {
 
 
 /* =============================== */
