@@ -15,6 +15,7 @@ section.card {
     border-left: 4px solid #d6b36a;
 }
 
+
 /* =============================== */
 /* COMPACT TABLE DISPLAY */
 /* ADMIN DASHBOARD */
@@ -41,4 +42,26 @@ thead th {
 
 tbody tr:hover {
     background-color: rgba(255,255,255,0.05);
+}
+
+
+/* =============================== */
+/* AGREEMENT STATUS BADGES */
+/* =============================== */
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.signed {
+    background-color: #2d6a4f;
+    color: #d8f3dc;
+}
+
+.badge.unsigned {
+    background-color: #7f1d1d;
+    color: #fee2e2;
 }
