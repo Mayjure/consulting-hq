@@ -82,7 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>${lead.phone}</td>
             <td>${lead.medicaid}</td>
             <td>${lead.care}</td>
-            <td>${lead.agreement}</td>
+            <td>
+                <span class="badge ${lead.agreement === 'Signed' ? 'signed' : 'unsigned'}">
+                    ${lead.agreement}
+                </span>
+            </td>
+
         `;
 
         referralTableBody.appendChild(row);
