@@ -114,6 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("No leads selected.");
             return;
         }
+        
+        if (selectedBoxes.length > 4) {
+            alert("Batch limit exceeded. Maximum of 4 leads allowed.");
+            return;
+        }
 
         let unsignedFound = false;
         let selectedIds = [];
