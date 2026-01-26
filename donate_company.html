@@ -80,7 +80,7 @@
 
     </section>
 
-    <!-- =============================== -->
+<!-- =============================== -->
 <!-- PAYMENT STRUCTURE DISCLOSURE -->
 <!-- =============================== -->
 <section class="card card-brown center-text">
@@ -151,6 +151,74 @@
         the agreement has been reviewed and signed.
     </p>
 
+    
+<!-- =============================== -->
+<!-- AGREEMENT MODAL OVERLAY -->
+<!-- EMBEDDED SIGNING INTERFACE -->
+<!-- =============================== -->
+<div id="agreementModal" class="modal-overlay">
+
+    <div class="modal-content">
+
+        <!-- =============================== -->
+        <!-- MODAL HEADER -->
+        <!-- =============================== -->
+        <h2>Referral Agreement</h2>
+
+        <!-- =============================== -->
+        <!-- AGREEMENT TEXT -->
+        <!-- =============================== -->
+        <div class="agreement-text">
+            <p>
+                This Referral Agreement governs participation in the
+                Consulting HQ referral facilitation program.
+            </p>
+
+            <p>
+                By executing this agreement, the participating agency
+                accepts all donation obligations associated with
+                accepted referrals.
+            </p>
+
+            <p>
+                No client information will be released prior to
+                agreement execution.
+            </p>
+        </div>
+
+        <!-- =============================== -->
+        <!-- SIGNATURE INPUT -->
+        <!-- =============================== -->
+        <label>
+            Authorized Representative Name:
+            <input type="text" id="signerName" placeholder="Full Legal Name">
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox" id="signAgreementCheckbox">
+            I electronically sign and agree to the Referral Agreement
+        </label>
+
+        <!-- =============================== -->
+        <!-- MODAL ACTION BUTTON -->
+        <!-- =============================== -->
+        <br><br>
+        <button id="signAgreementBtn" class="button">
+            Sign Agreement
+        </button>
+
+        <br><br>
+        <button id="closeModalBtn" class="button secondary">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+    
     <!-- =============================== -->
     <!-- AGREEMENT REVIEW ACTION -->
     <!-- =============================== -->
@@ -160,6 +228,15 @@
         Review & Sign Referral Agreement
     </a>
 
+<!-- =============================== -->
+<!-- AGREEMENT CONFIRMATION CHECKBOX -->
+<!-- MUST BE CHECKED BEFORE PROCEEDING -->
+<!-- =============================== -->
+<label style="display:block; margin-top:20px;">
+    <input type="checkbox" id="agreementCheckbox">
+    I acknowledge and agree that the Referral Agreement has been reviewed and signed.
+</label>
+    
     <p style="margin-top: 20px; font-size: 0.9em;">
         Upon signature, agreement confirmation will be
         recorded and referral eligibility will be activated.
@@ -193,12 +270,12 @@
 
 </section>
 
-    <!-- =============================== -->
-    <!-- NEXT STEP -->
-    <!-- =============================== -->
 <!-- =============================== -->
-<!-- PROCEED ACTION -->
+<!-- NEXT STEP -->
 <!-- =============================== -->
+    <!-- =============================== -->
+    <!-- PROCEED ACTION -->
+    <!-- =============================== -->
 <section class="center-text">
     <a href="#" class="button">
         Proceed to Donation Instructions
