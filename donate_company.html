@@ -151,6 +151,11 @@
         the agreement has been reviewed and signed.
     </p>
 
+     <button id="openAgreement" class="button">
+        Review & Sign Referral Agreement
+    </button>
+
+</section>
     
 <!-- =============================== -->
 <!-- AGREEMENT MODAL OVERLAY -->
@@ -358,6 +363,45 @@ proceedBtn.addEventListener("click", function(e) {
     }
 });
 </script>
+
+    <script>
+        
+/* =============================== */
+/* AGREEMENT MODAL CONTROLS */
+/* =============================== */
+
+const modal = document.getElementById("agreementModal");
+const openBtn = document.getElementById("openAgreement");
+const closeBtn = document.getElementById("closeAgreement");
+
+openBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+</script>
+
+    
+<!-- =============================== -->
+<!-- REFERRAL AGREEMENT MODAL -->
+<!-- EMBEDDED E-SIGN -->
+<!-- =============================== -->
+<div id="agreementModal" class="agreement-modal">
+
+    <div class="agreement-content">
+
+        <button id="closeAgreement" class="close-btn">✕</button>
+
+        <iframe
+            src="https://YOUR-ESIGN-LINK-HERE"
+            frameborder="0">
+        </iframe>
+
+    </div>
+
+</div>
 
     
 </body>
