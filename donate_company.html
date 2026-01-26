@@ -156,98 +156,6 @@
     </button>
 
 </section>
-    
-<!-- =============================== -->
-<!-- AGREEMENT MODAL OVERLAY -->
-<!-- EMBEDDED SIGNING INTERFACE -->
-<!-- =============================== -->
-<div id="agreementModal" class="modal-overlay">
-
-    <div class="modal-content">
-
-        <!-- =============================== -->
-        <!-- MODAL HEADER -->
-        <!-- =============================== -->
-        <h2>Referral Agreement</h2>
-
-        <!-- =============================== -->
-        <!-- AGREEMENT TEXT -->
-        <!-- =============================== -->
-        <div class="agreement-text">
-            <p>
-                This Referral Agreement governs participation in the
-                Consulting HQ referral facilitation program.
-            </p>
-
-            <p>
-                By executing this agreement, the participating agency
-                accepts all donation obligations associated with
-                accepted referrals.
-            </p>
-
-            <p>
-                No client information will be released prior to
-                agreement execution.
-            </p>
-        </div>
-
-        <!-- =============================== -->
-        <!-- SIGNATURE INPUT -->
-        <!-- =============================== -->
-        <label>
-            Authorized Representative Name:
-            <input type="text" id="signerName" placeholder="Full Legal Name">
-        </label>
-
-        <br><br>
-
-        <label>
-            <input type="checkbox" id="signAgreementCheckbox">
-            I electronically sign and agree to the Referral Agreement
-        </label>
-
-        <!-- =============================== -->
-        <!-- MODAL ACTION BUTTON -->
-        <!-- =============================== -->
-        <br><br>
-        <button id="signAgreementBtn" class="button">
-            Sign Agreement
-        </button>
-
-        <br><br>
-        <button id="closeModalBtn" class="button secondary">
-            Cancel
-        </button>
-
-    </div>
-
-</div>
-
-    
-<!-- =============================== -->
-<!-- AGREEMENT REVIEW ACTION -->
-<!-- OPENS MODAL (NO PAGE LEAVE) -->
-<!-- =============================== -->
-<a href="#"
-   id="openAgreementBtn"
-   class="button">
-    Review & Sign Referral Agreement
-</a>
-
-
-<!-- =============================== -->
-<!-- AGREEMENT CONFIRMATION CHECKBOX -->
-<!-- MUST BE CHECKED BEFORE PROCEEDING -->
-<!-- =============================== -->
-    
-    <p style="margin-top: 20px; font-size: 0.9em;">
-        Upon signature, agreement confirmation will be
-        recorded and referral eligibility will be activated.
-    </p>
-
-</section>
-
-
 
     
     <!-- =============================== -->
@@ -273,6 +181,7 @@
 
 </section>
 
+    
 <!-- =============================== -->
 <!-- NEXT STEP -->
 <!-- =============================== -->
@@ -287,7 +196,6 @@
         Proceed to Donation Instructions
     </a>
 </section>
-
 
 
     <!-- =============================== -->
@@ -306,63 +214,6 @@
 <footer class="center-text">
     <p>© Marie-Charles Consulting LLC. All Rights Reserved. Referral participation subject to agreement.</p>
 </footer>
-
-    
-<script>
-/* =============================== */
-/* AGREEMENT MODAL CONTROL */
-/* =============================== */
-
-let agreementSigned = false;
-
-const modal = document.getElementById("agreementModal");
-const signBtn = document.getElementById("signAgreementBtn");
-const closeBtn = document.getElementById("closeModalBtn");
-const proceedBtn = document.getElementById("proceedBtn");
-
-/* =============================== */
-/* OPEN MODAL */
-/* =============================== */
-document.getElementById("openAgreementBtn").addEventListener("click", () => {
-    modal.style.display = "block";
-});
-
-/* =============================== */
-/* SIGN AGREEMENT */
-/* =============================== */
-signBtn.addEventListener("click", () => {
-
-    const name = document.getElementById("signerName").value;
-    const checked = document.getElementById("signAgreementCheckbox").checked;
-
-    if (!name || !checked) {
-        alert("Name and agreement confirmation are required.");
-        return;
-    }
-
-    agreementSigned = true;
-    modal.style.display = "none";
-    alert("Agreement signed successfully.");
-
-});
-
-/* =============================== */
-/* CLOSE MODAL */
-/* =============================== */
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-});
-
-/* =============================== */
-/* ENFORCE AGREEMENT BEFORE PROCEED */
-/* =============================== */
-proceedBtn.addEventListener("click", function(e) {
-    if (!agreementSigned) {
-        e.preventDefault();
-        alert("You must sign the referral agreement before proceeding.");
-    }
-});
-</script>
 
     
 <!-- =============================== -->
@@ -384,7 +235,8 @@ proceedBtn.addEventListener("click", function(e) {
 
 </div>
 
-    <script>
+    
+<script>
 /* =============================== */
 /* AGREEMENT MODAL CONTROLS */
 /* =============================== */
