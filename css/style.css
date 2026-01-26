@@ -8,6 +8,7 @@ body {
     color: #f5f0e6; /* soft readable text */
 }
 
+
 /* =============================== */
 /* MAIN CONTENT CONTAINER */
 /* =============================== */
@@ -16,6 +17,7 @@ body {
     margin: auto; /* centers the content */
     padding: 40px 20px; /* space inside */
 }
+
 
 /* =============================== */
 /* CARD CONTAINERS */
@@ -30,6 +32,7 @@ body {
     box-sizing: border-box;
 }
 
+
 /* =============================== */
 /* HEADINGS */
 /* =============================== */
@@ -38,6 +41,7 @@ h1, h2 {
     font-weight: normal;
     margin-bottom: 15px;
 }
+
 
 /* =============================== */
 /* LINKS & BUTTONS */
@@ -57,6 +61,7 @@ a, button {
 a:hover, button:hover {
     background-color: #b89633; /* slightly darker gold hover */
 }
+
 
 /* =============================== */
 /* DONATION SECTION */
@@ -79,6 +84,7 @@ a:hover, button:hover {
   text-decoration: none;
 }
 
+
 /* =============================== */
 /* DONATION BUTTON */
 /* =============================== */
@@ -94,6 +100,7 @@ a:hover, button:hover {
     width: 300px;
     border-radius: 6px;
 }
+
 
 /* =============================== */
 /*  FORMS */
@@ -114,6 +121,7 @@ input, textarea, select {
     border-radius: 4px;
 }
 
+
 /* =============================== */
 /* FOOTER */
 /* =============================== */
@@ -123,6 +131,7 @@ footer {
     color: #b3a58c; /* subtle gold/tan */
     text-align: center;
 }
+
 
 /* =============================== */
 /* MAIN NAVIGATION */
@@ -137,6 +146,7 @@ footer {
   margin: 0 10px;
 }
 
+
 /* =============================== */
 /* CENTER PAGE TITLES */
 /* =============================== */
@@ -144,6 +154,7 @@ footer {
 header, h1 {
   text-align: center;
 }
+
 
 /* =============================== */
 /* MAIN NAVIGATION */
@@ -154,14 +165,17 @@ header, h1 {
   margin-bottom: 30px;
 }
 
+
 /* =============================== */
 /* PAGE HEADERS */
 /* =============================== */
+
 
 header {
   text-align: center;
   margin-bottom: 30px;
 }
+
 
 /* =============================== */
 /* PAGE HEADINGS */
@@ -173,6 +187,7 @@ h2 {
   text-align: center;
 }
 
+
 /* =============================== */
 /* DONATION PAGE TWEAKS */
 /* =============================== */
@@ -182,6 +197,7 @@ h2 {
   margin-top: 30px;
 }
 
+
 /* =============================== */
 /* CENTER SECTION TITLES */
 /* =============================== */
@@ -189,6 +205,7 @@ h2 {
 h2 {
   text-align: center;
 }
+
 
 /* =============================== */
 /* FORM BUTTONS */
@@ -198,6 +215,7 @@ form button {
   display: block;
   margin: 30px auto 0 auto;
 }
+
 
 /* =============================== */
 /* HOMEPAGE ACTION BUTTONS */
@@ -211,6 +229,7 @@ form button {
   margin: 15px;
 }
 
+
 /* =============================== */
 /* HOMEPAGE ACTION AREA */
 /* =============================== */
@@ -220,6 +239,7 @@ form button {
   margin-top: 40px;
 }
 
+
 /* =============================== */
 /* BOTTOM NAVIGATION */
 /* =============================== */
@@ -228,6 +248,7 @@ form button {
   font-size: 0.9em;
   padding: 8px 14px;
 }
+
 
 /* =============================== */
 /* BOTTOM NAVIGATION */
@@ -245,6 +266,7 @@ form button {
   font-size: 0.9em;
 }
 
+
 /* =============================== */
 /* PAGE BANNER */
 /* =============================== */
@@ -254,6 +276,7 @@ form button {
   background-color: #2a2a2a;
   margin-bottom: 30px;
 }
+
 
 /* =============================== */
 /* PAGE BANNER */
@@ -265,6 +288,7 @@ form button {
   background: linear-gradient(135deg, #3b2f2f, #1b1b1b);
 }
 
+
 /* =============================== */
 /* MODERN CARD EFFECT */
 /* =============================== */
@@ -273,6 +297,7 @@ form button {
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+
 
 /* =============================== */
 /* GLOBAL CARD ALIGNMENT FIX */
@@ -285,6 +310,7 @@ form button {
     margin-right: auto;
 }
 
+
 /* =============================== */
 /* TEXT ALIGNMENT HELPERS */
 /* =============================== */
@@ -292,6 +318,7 @@ form button {
 .center-text {
   text-align: center;
 }
+
 
 /* =============================== */
 /* SECTION WRAPPER */
@@ -303,6 +330,7 @@ form button {
     justify-content: center;
     width: 100%;
 }
+
 
 /* =============================== */
 /* SMOKE GREY FOUNDATION CARD */
@@ -318,6 +346,7 @@ form button {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
+
 /* =============================== */
 /* MODERN INTERACTION EFFECTS */
 /* =============================== */
@@ -331,6 +360,7 @@ form button {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.6);
 }
+
 
 /* =============================== */
 /* BROWN FOUNDATION CARD */
@@ -346,6 +376,7 @@ form button {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
 }
 
+
 /* =============================== */
 /* PAGE BANNER */
 /* FORCE FULL WIDTH */
@@ -355,6 +386,7 @@ form button {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
+
 
 /* =============================== */
 /* TRUE CENTER TEXT UTILITY */
@@ -370,6 +402,7 @@ form button {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 /* =============================== */
 /* AGREEMENT MODAL STYLES */
@@ -402,6 +435,7 @@ form button {
     padding: 15px;
     margin-bottom: 20px;
 }
+
 
 /* =============================== */
 /* AGREEMENT MODAL STYLING */
@@ -442,4 +476,15 @@ form button {
     font-size: 22px;
     border: none;
     cursor: pointer;
+}
+
+
+/* =============================== */
+/* DOUBLE-LAYER CARD WRAPPER */
+/* =============================== */
+.card-layer {
+    background: #2b2b2b;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 30px;
 }
