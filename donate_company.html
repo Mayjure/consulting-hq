@@ -300,5 +300,63 @@
     <p>© Marie-Charles Consulting LLC. All Rights Reserved. Referral participation subject to agreement.</p>
 </footer>
 
+    
+<script>
+/* =============================== */
+/* AGREEMENT MODAL CONTROL */
+/* =============================== */
+
+let agreementSigned = false;
+
+const modal = document.getElementById("agreementModal");
+const signBtn = document.getElementById("signAgreementBtn");
+const closeBtn = document.getElementById("closeModalBtn");
+const proceedBtn = document.getElementById("proceedBtn");
+
+/* =============================== */
+/* OPEN MODAL */
+/* =============================== */
+document.getElementById("openAgreementBtn").addEventListener("click", () => {
+    modal.style.display = "block";
+});
+
+/* =============================== */
+/* SIGN AGREEMENT */
+/* =============================== */
+signBtn.addEventListener("click", () => {
+
+    const name = document.getElementById("signerName").value;
+    const checked = document.getElementById("signAgreementCheckbox").checked;
+
+    if (!name || !checked) {
+        alert("Name and agreement confirmation are required.");
+        return;
+    }
+
+    agreementSigned = true;
+    modal.style.display = "none";
+    alert("Agreement signed successfully.");
+
+});
+
+/* =============================== */
+/* CLOSE MODAL */
+/* =============================== */
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+/* =============================== */
+/* ENFORCE AGREEMENT BEFORE PROCEED */
+/* =============================== */
+proceedBtn.addEventListener("click", function(e) {
+    if (!agreementSigned) {
+        e.preventDefault();
+        alert("You must sign the referral agreement before proceeding.");
+    }
+});
+</script>
+
+    
 </body>
 </html>
