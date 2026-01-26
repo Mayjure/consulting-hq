@@ -14,3 +14,31 @@ section.card {
 #referrals, #consults, #donations, #agreements {
     border-left: 4px solid #d6b36a;
 }
+
+/* =============================== */
+/* COMPACT TABLE DISPLAY */
+/* ADMIN DASHBOARD */
+/* =============================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 6px 8px; /* Reduced spacing */
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+thead th {
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+tbody tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
