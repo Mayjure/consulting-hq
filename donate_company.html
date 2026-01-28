@@ -190,6 +190,7 @@
 
 </div>
 
+    
 <!-- =============================== -->    
 <!-- =============================== -->
 <!--             FOOTER              -->
@@ -301,18 +302,21 @@
 </div>
 
 
-
-    
 <script>
+/* ===================================================== */
+/* PAGE: donate_company.html                              */
+/* PURPOSE: Enforce execution of Referral Agreement       */
+/*          prior to referral release and next steps      */
+/* ===================================================== */
+
+/* =============================== */
+/* AGREEMENT STATE (SINGLE SOURCE) */
+/* =============================== */
 let agreementSigned = false;
-/* =============================== */
-/* AGREEMENT MODAL CONTROLS */
-/* =============================== */
 
 /* =============================== */
-/* ELEMENT REFERENCES */
+/* ELEMENT REFERENCES              */
 /* =============================== */
-
 const modal = document.getElementById("agreementModal");
 const openBtn = document.getElementById("openAgreement");
 const signBtn = document.getElementById("signAgreementBtn");
@@ -320,78 +324,64 @@ const closeBtn = document.getElementById("closeModalBtn");
 const proceedBtn = document.getElementById("proceedBtn");
 
 /* =============================== */
-/* RESTORE SIGNED STATE */
+/* RESTORE PREVIOUS EXECUTION      */
 /* =============================== */
-
 if (localStorage.getItem("agreementSigned") === "true") {
     agreementSigned = true;
 }
 
 /* =============================== */
-/* OPEN AGREEMENT MODAL */
+/* OPEN AGREEMENT MODAL            */
 /* =============================== */
-
-openBtn.addEventListener("click", () => {
+openBtn.addEventListener("click", function () {
     modal.style.display = "block";
 });
 
 /* =============================== */
-/* CLOSE MODAL */
+/* CLOSE AGREEMENT MODAL           */
 /* =============================== */
-
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
 });
 
 /* =============================== */
-/* SIGN AGREEMENT */
+/* SIGN AGREEMENT ACTION           */
 /* =============================== */
+signBtn.addEventListener("click", function () {
 
-signBtn.addEventListener("click", () => {
+    const name = document.getElementById("signerName").value.trim();
+    const confirmed = document.getElementById("signAgreementCheckbox").checked;
 
-    const name = document.getElementById("signerName").value;
-    const checked = document.getElementById("signAgreementCheckbox").checked;
-
-    if (!name || !checked) {
-        alert("Name and confirmation are required.");
+    if (!name || !confirmed) {
+        alert("Authorized representative name and agreement confirmation are required.");
         return;
     }
 
-    
-/* =============================== */
-/* RECORD AGREEMENT EXECUTION */
-/* =============================== */
+    /* =============================== */
+    /* RECORD AGREEMENT EXECUTION      */
+    /* =============================== */
+    agreementSigned = true;
 
-agreementSigned = true;
+    localStorage.setItem("agreementSigned", "true");
+    localStorage.setItem("agreementSigner", name);
+    localStorage.setItem("agreementTimestamp", new Date().toISOString());
 
-/* Store execution proof */
-localStorage.setItem("agreementSigned", "true");
-localStorage.setItem("agreementSigner", name);
-localStorage.setItem("agreementTimestamp", new Date().toISOString());
+    modal.style.display = "none";
 
-modal.style.display = "none";
-
-alert("Referral Agreement executed successfully.");
-
+    alert("Referral Agreement executed successfully.");
 });
 
-    
 /* =============================== */
-/* ENFORCE AGREEMENT BEFORE PROCEED */
+/* ENFORCE AGREEMENT BEFORE PROCEED*/
 /* =============================== */
-
 proceedBtn.addEventListener("click", function (e) {
     if (!agreementSigned) {
         e.preventDefault();
         alert("Referral Agreement must be executed before proceeding.");
     }
 });
-</script>
+</script>  
 
-
-<script>
-let agreementSigned = false;
-</script>
 
     
     
