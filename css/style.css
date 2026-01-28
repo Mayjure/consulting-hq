@@ -513,7 +513,8 @@ form button {
 /* =============================== */
 
 .modal-content {
-    background: #fff;
+    background: #2f2f2f;
+    color: #f5f5f5;
     max-width: 700px;
     width: 90%;
     margin: 60px auto;
