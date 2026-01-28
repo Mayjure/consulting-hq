@@ -131,6 +131,12 @@
         Review & Sign Referral Agreement
     </button>
 
+<!-- =============================== -->
+<!-- AGREEMENT STATUS DISPLAY -->
+<!-- =============================== -->
+<p id="agreementStatus" style="margin-top:15px; font-weight:bold;"></p>
+
+
 </section>
 
     
@@ -204,7 +210,8 @@
 
         <h2>Referral Agreement</h2>
 
-        <!-- =============================== -->
+        
+<!-- =============================== -->
 <!-- AGREEMENT TEXT -->
 <!-- REFERRAL AGREEMENT TERMS -->
 <!-- =============================== -->
@@ -350,14 +357,25 @@ signBtn.addEventListener("click", () => {
         return;
     }
 
-    agreementSigned = true;
-    localStorage.setItem("agreementSigned", "true");
+    
+/* =============================== */
+/* RECORD AGREEMENT EXECUTION */
+/* =============================== */
 
-    modal.style.display = "none";
-    alert("Agreement executed. Referral release authorized.");
+agreementSigned = true;
+
+/* Store execution proof */
+localStorage.setItem("agreementSigned", "true");
+localStorage.setItem("agreementSigner", name);
+localStorage.setItem("agreementTimestamp", new Date().toISOString());
+
+modal.style.display = "none";
+
+alert("Referral Agreement executed successfully.");
 
 });
 
+    
 /* =============================== */
 /* ENFORCE AGREEMENT BEFORE PROCEED */
 /* =============================== */
